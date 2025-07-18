@@ -4,10 +4,10 @@ html, body {
   background-color: #0a0a0a;
   color: #fff;
   font-family: 'Georgia', serif;
-  min-height: 100%;
+  min-height: 100vh;
   height: auto;
   overflow-x: hidden;
-  overflow-y: auto; /* NE Hidden! umožní scroll, když je obsah delší */
+  overflow-y: auto;
 }
 
 body {
@@ -16,24 +16,28 @@ body {
   align-items: center;
 }
 
-/* Úvodní text */
+/* --- INTRO TEXT CENTERED VERTIKÁLNĚ I HORIZONTÁLNĚ --- */
 #intro-text {
   opacity: 0;
   font-size: 1.6rem;
   text-align: center;
   max-width: 90%;
+  height: 100vh; /* celý viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   animation: fadeIn 4s ease forwards;
   animation-delay: 1s;
 }
 
-/* Kontejner pro kartu */
+/* --- KONTEJNER KARTY --- */
 #card-container {
   display: none;
   margin-top: 2rem;
   perspective: 1000px;
 }
 
-/* Karta samotná */
+/* --- KARTA --- */
 .card {
   width: 250px;
   height: 400px;
@@ -72,19 +76,20 @@ body {
   background-position: center;
 }
 
-/* Výklad ke kartě */
+/* --- VÝKLAD --- */
 #meaning {
   display: none;
-  margin: 2rem 1rem;
+  margin: 2rem 1rem 4rem; /* dost místa dole pro scroll i tlačítko */
   font-size: 1.2rem;
   max-width: 90%;
   text-align: center;
   color: #d9b3ff;
   line-height: 1.6;
   white-space: pre-wrap;
+  /* Umožní scroll v rámci stránky */
 }
 
-/* Tlačítko Zpět */
+/* --- TLAČÍTKO ZPĚT --- */
 .back-btn {
   position: fixed;
   top: 16px;
@@ -114,7 +119,7 @@ body {
   box-shadow: 0 0 15px #b787ff, 0 0 25px #a26ee2;
 }
 
-/* Animace */
+/* --- ANIMACE --- */
 @keyframes fadeIn {
   to {
     opacity: 1;
