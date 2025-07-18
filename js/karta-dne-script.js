@@ -25,24 +25,24 @@ const tarotCards = [
     image: "images/karty/03-the-empress.jpg",
     meaning: "Tvé vnitřní i vnější já dnes volá po péči. Možná něco roste. Vztah, nápad, ty sám/sama. Dej tomu prostor a výživu. Energie dne přeje laskavosti, kreativitě a napojení na život."
   },
-{
+  {
     name: "Císař",
     image: "images/karty/04-the-emperor.jpg",
     meaning: "Dnes je čas vzít věci do vlastních rukou a postavit je na pevný základ. Jasné hranice, rozhodnost a vize ti přinesou klid a směr. Můžeš být oporou sobě i ostatním."
   },
-{
+  {
     name: "Velekněz",
     image: "images/karty/05-pope.jpg",
     meaning: "Zastav se a zeptej se: Čemu věřím? Dnešek přináší možnost spojit se s hlubším smyslem nebo moudrostí, která přesahuje jednotlivce. Někdy není třeba hledat nové cesty. Stačí důvěřovat těm, které fungují."
   },
-{
+  {
     name: "Zamilovaní",
     image: "images/karty/06-the-lovers.jpg",
     meaning: "Energie dne klade důraz na volbu. Nejen mezi „ano“ a „ne“, ale mezi tím, co s tebou ladí a co už ne. Odpovědi najdeš v sobě, ne ve vnějším světě. Ať už jde o vztah, hodnoty nebo směr. Rozhodnutí srdcem bude to pravé."
   },
-  ];
+];
 
-// Po 6s skryje text a ukáže kartu
+// Po 7 sekundách skryje intro a ukáže kartu
 setTimeout(() => {
   introText.style.animation = 'fadeOut 2s ease forwards';
   setTimeout(() => {
@@ -70,9 +70,8 @@ tarotCard.addEventListener('click', () => {
   }, 1200);
 });
 
-
+// Zpět reload stránky
 function goBack() {
   window.location.href = "tarot.html";
 }
-
 document.getElementById('back-button').addEventListener('click', goBack);
