@@ -1,17 +1,22 @@
-body {
+html, body {
   margin: 0;
   padding: 0;
   background-color: #0a0a0a;
   color: #fff;
   font-family: 'Georgia', serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  overflow: hidden;
+  min-height: 100%;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto; /* NE Hidden! umožní scroll, když je obsah delší */
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Úvodní text */
 #intro-text {
   opacity: 0;
   font-size: 1.6rem;
@@ -21,16 +26,17 @@ body {
   animation-delay: 1s;
 }
 
+/* Kontejner pro kartu */
 #card-container {
   display: none;
   margin-top: 2rem;
   perspective: 1000px;
 }
 
+/* Karta samotná */
 .card {
   width: 250px;
   height: 400px;
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/3a/The_Magician_Tarot_Card.jpg');
   background-size: cover;
   background-position: center;
   border-radius: 10px;
@@ -66,32 +72,28 @@ body {
   background-position: center;
 }
 
+/* Výklad ke kartě */
 #meaning {
   display: none;
-  margin-top: 2rem;
+  margin: 2rem 1rem;
   font-size: 1.2rem;
-  max-width: 80%;
+  max-width: 90%;
   text-align: center;
   color: #d9b3ff;
+  line-height: 1.6;
+  white-space: pre-wrap;
 }
 
-.back-btn-container {
-  margin-top: 2rem;
-  text-align: center;
-  animation: fadeIn 2s ease forwards;
-  opacity: 0;
-  animation-delay: 1s;
-}
-
+/* Tlačítko Zpět */
 .back-btn {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 10;
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 100;
   background-color: #7e49a6;
   color: #fff;
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.9rem;
   font-weight: bold;
   border: none;
   border-radius: 30px;
@@ -112,6 +114,7 @@ body {
   box-shadow: 0 0 15px #b787ff, 0 0 25px #a26ee2;
 }
 
+/* Animace */
 @keyframes fadeIn {
   to {
     opacity: 1;
