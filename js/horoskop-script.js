@@ -29,9 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       let text = '';
-      for (const [kategorie, obsah] of Object.entries(horoskop)) {
-        text += `${kategorie}:\n${obsah}\n\n`;
-      }
+for (const [kategorie, obsah] of Object.entries(horoskop)) {
+  text += `<p><strong>${kategorie}:</strong> ${obsah}</p>`;
+}
+
+vystup.innerHTML = text;
+
 
       vystup.textContent = text.trim();
     } catch (err) {
@@ -39,3 +42,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
