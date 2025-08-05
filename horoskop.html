@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Denní horoskop | AstralZone</title>
+  <link rel="stylesheet" href="css/menu-footer.css" />
+  <link rel="stylesheet" href="css/horoskop-styl.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Astral Zone</h1>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="nav">
+      <a href="index.html">Domů</a>
+      <a href="tarot.html">Tarotové výklady</a>
+      <a href="horoskopy.html">Horoskopy</a>
+      <a href="numerologie.html">Numerologie</a>
+      <a href="ritualy.html">Rituály</a>
+      <a href="predplatne.html" class="premium-link">Předplatné</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Denní horoskop</h1>
+
+    <label for="znameni">Vyber své znamení:</label>
+    <select id="znameni">
+      <option value="" disabled selected>-- Vyber znamení --</option>
+      <option value="Beran">Beran</option>
+      <option value="Býk">Býk</option>
+      <option value="Blíženci">Blíženci</option>
+      <option value="Rak">Rak</option>
+      <option value="Lev">Lev</option>
+      <option value="Panna">Panna</option>
+      <option value="Váhy">Váhy</option>
+      <option value="Štír">Štír</option>
+      <option value="Střelec">Střelec</option>
+      <option value="Kozoroh">Kozoroh</option>
+      <option value="Vodnář">Vodnář</option>
+      <option value="Ryby">Ryby</option>
+    </select>
+
+    <button id="btn-zobrazit">Zobrazit horoskop</button>
+
+    <div id="horoskop-vystup"></div>
+  </main>
+
+  <footer>
+    © 2025 Astral Zone. Všechna práva vyhrazena.
+  </footer>
+
+  <script src="js/horoskop-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,349 @@
+/* --- reset a základ --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0c0614;
+  color: #d6b0ff;
+  min-height: 100vh;
+}
+
+/* --- HEADER --- */
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(12,6,20,0.95);
+  border-bottom: 1px solid #411f55;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  z-index: 999;
+}
+header h1 {
+  font-size: 1.8rem;
+  color: #c7a8f0;
+  text-shadow: 0 0 8px #9c4df4;
+}
+nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+nav a {
+  color: #d6b0ff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #fff;
+}
+nav a.premium-link {
+  background: #7e49a6;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #b787ff;
+  color: white !important;
+  font-weight: 800;
+  transition: background 0.3s ease;
+}
+nav a.premium-link:hover {
+  background: #a26ee2;
+}
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1001;
+}
+.menu-toggle span {
+  width: 30px;
+  height: 3px;
+  background: #d6b0ff;
+  border-radius: 3px;
+  transition: all 0.4s ease;
+}
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    background: #1a0f26;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+  }
+  nav.active {
+    max-height: 500px;
+    opacity: 1;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+/* --- Container --- */
+.container {
+  max-width: 720px;
+  margin: 3rem auto 4rem;
+  padding: 0 2rem;
+}
+
+/* --- Nadpis --- */
+h1.page-title {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  color: #c7a8f0;
+  text-shadow: 0 0 15px #9c4df4;
+}
+
+/* --- FAQ styl --- */
+.faq-item {
+  background: rgba(18, 8, 38, 0.9);
+  margin-bottom: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #5a1b81;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  transition: box-shadow 0.3s ease;
+}
+.faq-item:hover {
+  box-shadow: 0 0 25px #8a43ff;
+}
+.faq-question {
+  padding: 1rem 1.5rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #d6b0ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.faq-question::after {
+  content: "+";
+  font-size: 1.8rem;
+  line-height: 1;
+  transition: transform 0.3s ease;
+  color: #b788ff;
+}
+.faq-item.open .faq-question::after {
+  content: "–";
+  transform: rotate(180deg);
+}
+.faq-answer {
+  max-height: 0;
+  padding: 0 1.5rem;
+  color: #c9a8ff;
+  font-size: 1rem;
+  line-height: 1.6;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  overflow: hidden;
+}
+.faq-item.open .faq-answer {
+  padding: 1rem 1.5rem 1.5rem;
+  max-height: 1000px;
+}
+
+/* --- Cena box --- */
+.price-box {
+  background: rgba(18, 8, 38, 0.95);
+  box-shadow: 0 0 30px #8e44ad;
+  border-radius: 15px;
+  padding: 2rem 2rem;
+  text-align: center;
+  color: #f6e3ff;
+  margin: 3rem 0 4rem;
+}
+.price-box h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 15px #b788ff;
+  color: #fff;
+}
+.price-box p {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #c9a8ff;
+}
+.price-amount {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ffd700;
+  text-shadow: 0 0 20px #ffd700;
+  margin-top: 0.2rem;
+}
+
+/* --- Formulář --- */
+form {
+  background: rgba(18, 8, 38, 0.9);
+  padding: 2rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 25px #5a1b81;
+  max-width: 100%;
+}
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: #b788ff;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-radius: 15px;
+  border: none;
+  background: #1a0e3a;
+  color: #e4d9ff;
+  font-size: 1rem;
+  box-shadow: inset 0 0 10px #5a2fff;
+  resize: vertical;
+  transition: box-shadow 0.3s ease;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 15px #b788ff;
+  background: #311d7a;
+}
+textarea {
+  min-height: 110px;
+}
+button[type="submit"] {
+  background: #b788ff;
+  color: #3a056b;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 1.8rem;
+  box-shadow: 0 0 18px #9c4df4;
+  transition: background-color 0.3s ease;
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+button[type="submit"]:hover {
+  background-color: #9c4df4;
+}
+
+/* --- Animace fadeInUp --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  } to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in-bottom {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.info-box {
+  background: rgba(60, 0, 80, 0.3);
+  border: 1px solid rgba(180, 0, 255, 0.4);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 40px 0;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 15px rgba(180, 0, 255, 0.2);
+  color: #eee;
+  animation: fadeIn 1.5s ease;
+}
+
+.info-box h2 {
+  font-size: 1.6rem;
+  color: #f0baff;
+  margin-bottom: 1rem;
+}
+
+.info-box p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.info-box ul {
+  margin-left: 1.5rem;
+  list-style: disc;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- FAQ Container --- */
+.faq-container {
+  margin: 4rem auto;
+}
+
+/* --- Checkboxy & stavové hlášky --- */
+.form-checks {
+  margin-top: 1.2rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin: 0.6rem 0;
+  color: #c9a8ff;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #b788ff; /* moderní prohlížeče */
+  cursor: pointer;
+}
+
+.checkbox a {
+  color: #b788ff;
+  text-decoration: underline;
+}
+
+.form-status {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.form-status.success {
+  color: #00ffa3;
+}
+
+.form-status.error {
+  color: #ff4d7a;
+}

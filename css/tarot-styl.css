@@ -1,0 +1,319 @@
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #c7a8f0;
+      text-shadow: 0 0 10px #9c4df4;
+    }
+
+    .section p {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #d6b0ff;
+      line-height: 1.6;
+    }
+
+    .karta-dne-box {
+      margin-top: 3rem;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 0 30px #00ff88;
+      background: rgba(0, 255, 136, 0.05);
+    }
+
+    .karta-dne-box h3 {
+      font-size: 1.5rem;
+      color: #a0ffd0;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .karta-dne-box p {
+      text-align: center;
+      color: #d0ffe5;
+    }
+
+    .proc-tarot {
+      margin-top: 4rem;
+      background: rgba(157, 81, 255, 0.05);
+      border-radius: 15px;
+      box-shadow: 0 0 20px #5a1b81;
+      padding: 2rem;
+    }
+
+    .proc-tarot ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .proc-tarot li {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      color: #e3caff;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .proc-tarot li::before {
+      content: "\2726";
+      position: absolute;
+      left: 0;
+      color: #b788ff;
+    }
+
+    .sluzby-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 4rem;
+    }
+
+    .sluzba-karta {
+      background: rgba(18, 8, 38, 0.9);
+      border-radius: 15px;
+      box-shadow: 0 0 15px #5a1b81;
+      padding: 1.5rem;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .sluzba-karta:hover {
+      transform: scale(1.05);
+    }
+
+    .sluzba-karta h3 {
+      color: #d6b0ff;
+      margin-bottom: 0.5rem;
+    }
+
+    .sluzba-karta p {
+      color: #bba0ff;
+    }
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  margin: 3rem 1rem;
+  position: relative;
+  z-index: 0;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.3rem;
+  color: #c7a8f0;
+  text-shadow: 0 0 12px #9c4df4;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+/* Purple glowing blur behind */
+.purple-glow {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background: rgba(157, 81, 255, 0.4);
+  filter: blur(50px);
+  left: 50%;
+  transform: translateX(-50%);
+  top: 80px;
+  z-index: -1;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 1rem auto 3rem;
+  color: #bba0ff;
+  font-size: 1.1rem;
+}
+
+/* Grid for cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 2rem;
+  padding: 0 2rem 3rem;
+}
+
+.card {
+  background: rgba(18, 8, 38, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 0 15px #5a1b81;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+.card-img {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.card-title {
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 0 10px #7a46ff;
+}
+
+/* Text pod obrázkem */
+.card-text {
+  padding: 1rem 1rem 1.5rem;
+  color: #c9a8ff;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Subscribe section - upraveno pro obrázek nahoře */
+.subscribe {
+  background: rgba(18, 8, 38, 0.95);
+  margin: 0 2rem 3rem;
+  border-radius: 15px;
+  /* display: flex; -- zrušíme flex, aby položky šly pod sebe */
+  display: block;
+  overflow: hidden;
+  box-shadow: 0 0 30px #8e44ad;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe:hover {
+  background-color: rgba(18, 8, 38, 1);
+}
+
+.subscribe a {
+  display: block; /* místo flex */
+  width: 100%;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 15px; /* aby se zakulacení z subscribe projevilo i na linku */
+  overflow: hidden;
+}
+
+.subscribe .card-img {
+  width: 100%;         /* celá šířka nahoře */
+  height: 200px;       /* pevná výška */
+  border-radius: 15px 15px 0 0; /* zakulacení jen nahoře */
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 1rem; /* mezera pod obrázkem */
+}
+
+.subscribe-content {
+  padding: 1.5rem 2rem;
+  display: block; /* zrušeno flex a flex-direction */
+  text-align: center; /* text vycentrovaný */
+}
+
+.subscribe-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 15px #b788ff;
+  color: #fff;
+}
+
+.subscribe-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #c2a6ff;
+}
+
+.subscribe-content button {
+  background: #b788ff;
+  color: #3a056b;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+  margin: 0 auto; /* aby bylo tlačítko centrované */
+  display: block;
+}
+
+.subscribe-content button:hover {
+  background-color: #9c4df4;
+}
+
+
+/* Zlatý subscribe box + tlačítko */
+.subscribe.subscribe-gold {
+  box-shadow: 0 0 30px #ffd700;
+}
+
+.subscribe.subscribe-gold .subscribe-content button {
+  background: #ffd700;
+  color: #3a056b;
+}
+
+.subscribe.subscribe-gold .subscribe-content button:hover {
+  background-color: #e6c200;
+}
+
+.daily-card-cta {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.glow-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0f0;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 40px #0f0;
+  transition: transform 0.2s, box-shadow 0.3s ease;
+}
+
+.glow-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #0f0, 0 0 40px #0f0, 0 0 60px #0f0;
+}
+
+.btn-order {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.4rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #7e49a6;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 0 8px #b787ff;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-order:hover {
+  background-color: #a26ee2;
+  box-shadow: 0 0 15px #b787ff, 0 0 25px #a26ee2;
+}

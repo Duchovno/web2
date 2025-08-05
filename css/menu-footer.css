@@ -1,0 +1,142 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0c0614;
+  color: #d6b0ff;
+}
+
+/* HEADER */
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(12,6,20,0.95);
+  border-bottom: 1px solid #411f55;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  z-index: 999;
+}
+
+/* Název */
+header h1 {
+  font-size: 1.8rem;
+  color: #c7a8f0;
+  text-shadow: 0 0 8px #9c4df4;
+}
+
+/* Navigace */
+nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+nav a {
+  color: #d6b0ff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+/* Předplatné link má vlastní styl */
+nav a.premium-link {
+  background: #7e49a6;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #b787ff;
+  color: white !important;
+  font-weight: 800;
+  transition: background 0.3s ease;
+}
+
+nav a.premium-link:hover {
+  background: #a26ee2;
+}
+
+/* Hamburger menu - ikonka */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  width: 30px;
+  height: 3px;
+  background: #d6b0ff;
+  border-radius: 3px;
+  transition: all 0.4s ease;
+}
+
+/* Animace hamburgeru po kliknutí */
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* MOBILE NAVIGATION */
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    background: #1a0f26;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+  }
+  nav.active {
+    max-height: 500px; /* dost velké pro všechny odkazy */
+    opacity: 1;
+  }
+
+  /* Zobraz hamburger */
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #7c6593;
+  border-top: 1px solid #411f55;
+  background: rgba(12, 6, 20, 0.9);
+}
+
+.stylovy-hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #7e49a6, #b788ff, #7e49a6, transparent);
+  margin: 2.5rem auto;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #9c4df4;
+}

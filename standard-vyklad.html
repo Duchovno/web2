@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Standardní výklad – Astral Zone</title>
+  <link rel="stylesheet" href="css/vyklad-style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Astral Zone</h1>
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <nav id="nav">
+    <a href="index.html">Domů</a>
+    <a href="tarot.html">Tarotové výklady</a>
+    <a href="horoskopy.html">Horoskopy</a>
+    <a href="numerologie.html">Numerologie</a>
+    <a href="ritualy.html">Rituály</a>
+    <a href="predplatne.html" class="premium-link">Předplatné</a>
+  </nav>
+</header>
+
+<section class="container">
+  <h1 class="page-title fade-in-bottom">Standardní výklad</h1>
+
+<!-- Info box: Co je standardní výklad -->
+<section class="info-box">
+  <h2>Co je standardní tarotový výklad?</h2>
+<p>
+  Standardní výklad je ideální volbou, pokud potřebuješ <strong>víc než jen jednu odpověď</strong>.  
+  Je to forma tarotového rozboru, která ti poskytne komplexní pohled na různé oblasti tvého života.  
+  Tento výklad kombinuje <strong>2 zrcadlové karty</strong>, které se ladí na tvoji energii a situaci, a <strong>3 samostatné otázky</strong>,  
+  přičemž na každou otázku se vykládají <strong>3 karty</strong>.  
+</p>
+<p>
+  Díky této struktuře dokáže standardní výklad nejen zodpovědět jednotlivé otázky,  
+  ale také ukázat souvislosti mezi nimi.  
+  Zrcadlové karty pomohou nahlédnout do tvého současného nastavení a toho, co tě ovlivňuje,  
+  zatímco každá sada 3 karet ke konkrétní otázce odhalí vývoj, možnosti a doporučení.
+</p>
+<p>
+  Standardní výklad je ideální, pokud:
+  <ul>
+    <li>Máš víc oblastí, na které se potřebuješ zeptat (vztahy, práce, finance…).</li>
+    <li>Chceš pochopit, jak spolu souvisí různé části tvého života.</li>
+    <li>Řešíš komplikovanější situaci a potřebuješ vidět víc úhlů pohledu.</li>
+    <li>Hledáš odpověď i doporučení pro další kroky.</li>
+  </ul>
+</p>
+<p>  
+  Každá odpověď je sepsaná tak, aby ti dala nejen vhled, ale i inspiraci k dalšímu kroku.
+</p>
+<p>
+  Pokud chceš podrobný vhled a cítíš, že ti jedna otázka nestačí, <strong>standardní výklad ti nabídne větší hloubku i jasnější porozumění.</strong>
+</p>
+</section>
+
+  <!-- Cena -->
+  <div class="price-box">
+    <h3>Kolik to stojí?</h3>
+    <p>Odpověďi na své otázky můžeš získat jen za</p>
+    <div class="price-amount">399 Kč</div>
+  </div>
+
+
+  <!-- Formulář pro Standardní výklad -->
+<form id="order-form" autocomplete="off">
+  <input type="hidden" name="vyklad_type" value="standard">
+
+  <label for="name">Jméno a příjmení</label>
+  <input type="text" id="name" name="name" required placeholder="Tvé celé jméno" />
+
+  <label for="email">E-mail</label>
+  <input type="email" id="email" name="email" required placeholder="Tvůj e-mail" />
+
+  <label for="question1">Tvoje otázka/téma číslo 1</label>
+  <textarea id="question1" name="question1" required placeholder="Napiš svou první otázku"></textarea>
+
+  <label for="question2">Tvoje otázka/téma číslo 2</label>
+  <textarea id="question2" name="question2" required placeholder="Napiš svou druhou otázku"></textarea>
+
+  <label for="question3">Tvoje otázka/téma číslo 3</label>
+  <textarea id="question3" name="question3" required placeholder="Napiš svou třetí otázku"></textarea>
+
+  
+   <!-- Checkboxy -->
+  <div class="form-checks">
+    <label class="checkbox">
+      <input type="checkbox" id="terms" name="terms" required>
+      <span>Souhlasím s <a href="tarot-podminky.html" target="_blank">Obchodními podmínkami</a></span>
+    </label>
+
+    <label class="checkbox">
+      <input type="checkbox" id="gdpr" name="gdpr" required>
+      <span>Souhlasím se zpracováním osobních údajů <a href="tarot-gdpr.html" target="_blank">(GDPR)</a></span>
+    </label>
+  </div>
+
+
+  <!-- Honeypot -->
+  <input type="text" name="website" style="display:none">
+
+  <button type="submit">Objednat výklad</button>
+  <div id="form-status" class="form-status"></div>
+</form>
+
+
+<!-- Odeslání emailu -->
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("pOWpwIv-ydhiVC4xI"); // <- doplň svůj public key
+  })();
+</script>
+
+
+<!-- FAQ -->
+<section class="faq-container container">
+  <div class="faq-item" id="faq1">
+    <div class="faq-question">Co je standardní výklad?</div>
+    <div class="faq-answer">
+      Standardní výklad je komplexnější způsob, jak získat odpovědi nebo náhled na konkrétní situace, otázky či problémy, které tě momentálně trápí.
+    </div>
+  </div>
+  <div class="faq-item" id="faq2">
+    <div class="faq-question">Jak výklad probíhá?</div>
+    <div class="faq-answer">
+      Po objednání ti přijde email s instrukcemi k platbě. Platba je na účet nebo pomocí QR kódu. Po zaplacení provedu výklad sestavený na základě 7 tarotových karet, doplněný o srozumitelný popis a doporučení.
+    </div>
+  </div>
+  <div class="faq-item" id="faq3">
+    <div class="faq-question">Jak výklad obdržím?</div>
+    <div class="faq-answer">
+      Výklad ti přijde emailem zpravidla do 48 hodin od obdržení platby. Výklad je zasílám jako PDF soubor v příloze emailu. V případě dotazů jsem ti k dispozici na emailu nebo na sociálních sítích.
+    </div>
+  </div>
+  <div class="faq-item" id="faq4">
+    <div class="faq-question">Proč si objednat výklad právě u mě?</div>
+    <div class="faq-answer">
+      Každý výklad, který dělám, je ručně vykládaný, intuitivně vedený a přizpůsobený tobě na míru. Dostaneš detailní popis, který ti pomůže pochopit souvislosti a udělat další krok. Dávám důraz na jasnost a hloubku.
+    </div>
+  </div>
+</section>
+
+<script src="js/vyklad-script.js"></script>
+</body>
+</html>
