@@ -1,80 +1,90 @@
-/* Obecné nastavení */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
   margin: 0;
-  padding: 0;
-  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0d0618;
+  color: #fff;
 }
 
 .container {
-  max-width: 700px;
-  margin: 3rem auto;
+  max-width: 600px;
+  margin: 5rem auto;
   padding: 2rem;
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: rgba(0, 255, 136, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 0 30px #00ff88;
+  text-align: center;
 }
 
-/* Nadpis */
 h1 {
-  text-align: center;
-  color: #6a1b9a; /* fialová */
+  font-size: 2.5rem;
+  color: #c7a8f0;
+  text-shadow: 0 0 12px #9c4df4;
   margin-bottom: 2rem;
 }
 
-/* Label a select */
 label {
   display: block;
-  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
-  color: #6a1b9a;
+  color: #b788ff;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 0 8px #b788ff;
 }
 
 select {
-  width: 100%;
-  padding: 0.6rem;
-  font-size: 1rem;
-  border: 2px solid #6a1b9a;
-  border-radius: 6px;
-  background-color: #f3e5f5;
-  color: #333;
-  appearance: none;
-  margin-bottom: 1.5rem;
-}
-
-select:focus {
-  outline: none;
-  border-color: #9c27b0;
-  background-color: #fce4ec;
-}
-
-/* Tlačítko */
-button#btn-zobrazit {
-  display: block;
-  width: 100%;
-  padding: 0.75rem;
+  background: rgba(18, 8, 38, 0.9);
+  color: #d6b0ff;
+  border: 1px solid #7e49a6;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
   font-size: 1.1rem;
-  background-color: #6a1b9a;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 0 10px #7e49a6;
+  outline: none;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px;
   margin-bottom: 2rem;
+  appearance: none;
+  cursor: pointer;
 }
 
-button#btn-zobrazit:hover {
-  background-color: #8e24aa;
+select option {
+  background: #0d0618;
+  color: #d6b0ff;
 }
 
-/* Výstup horoskopu */
+select:hover,
+select:focus {
+  box-shadow: 0 0 20px #b788ff;
+  background: rgba(30, 15, 65, 0.9);
+}
+
+button {
+  background: #b788ff;
+  color: #3a056b;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 15px #b787ff;
+  font-size: 1.1rem;
+  display: block;
+  margin: 0 auto 1.5rem;
+  max-width: 300px;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #9c4df4;
+  box-shadow: 0 0 25px #b787ff, 0 0 35px #9c4df4;
+}
+
 #horoskop-vystup {
-  white-space: pre-line;
-  background-color: #f3e5f5;
-  border-left: 4px solid #6a1b9a;
-  padding: 1rem;
-  border-radius: 8px;
-  font-size: 1.05rem;
+  margin-top: 2rem;
+  text-align: center;
+  color: #d0ffe5;
+  font-size: 1.1rem;
   line-height: 1.6;
 }
