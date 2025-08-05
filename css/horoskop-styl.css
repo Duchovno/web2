@@ -88,3 +88,15 @@ button:hover {
   font-size: 1.1rem;
   line-height: 1.6;
 }
+
+#horoskop-vystup p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #d0ffe5;
+  line-height: 1.6;
+}
+
+#horoskop-vystup strong {
+  color: #c7a8f0;
+  text-shadow: 0 0 10px #9c4df4;
+}
