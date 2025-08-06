@@ -89,14 +89,29 @@ button:hover {
   line-height: 1.6;
 }
 
-#horoskop-vystup p {
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
-  color: #d0ffe5;
-  line-height: 1.6;
+/* 🔮 NOVĚ STYLOVANÉ BLOKY HOROSKOPU */
+.horoskop-blok {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid #9c4df4;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #9c4df4;
+  padding: 1.2rem 1.5rem;
+  margin: 1.5rem auto;
+  max-width: 500px;
+  text-align: left;
 }
 
-#horoskop-vystup strong {
+.horoskop-blok p:first-child {
+  margin: 0 0 0.6rem 0;
+  font-size: 1.2rem;
+  font-weight: bold;
   color: #c7a8f0;
-  text-shadow: 0 0 10px #9c4df4;
+  text-shadow: 0 0 8px #9c4df4;
+}
+
+.horoskop-blok p:last-child {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #d0ffe5;
+  line-height: 1.5;
 }
