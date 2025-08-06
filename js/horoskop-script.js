@@ -30,10 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
       let text = '';
       for (const [kategorie, obsah] of Object.entries(horoskop)) {
-        text += `<p><strong>${kategorie}:</strong> ${obsah}</p>`;
+        text += `
+          <div class="horoskop-blok">
+            <p><strong>${kategorie}:</strong></p>
+            <p>${obsah}</p>
+          </div>
+        `;
       }
 
-      vystup.innerHTML = text;
+      vystup.innerHTML = text.trim();
 
     } catch (err) {
       vystup.textContent = `Chyba při načítání horoskopu: ${err.message}`;
